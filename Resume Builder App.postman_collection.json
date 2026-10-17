@@ -1,0 +1,530 @@
+{
+	"info": {
+		"_postman_id": "7ca5ea14-e7e6-42eb-b8c4-333f24cf91fb",
+		"name": "Resume Builder App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12768386"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/auth/verify-email?token=dfadfasdfsdfsdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"verify-email"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "dfadfasdfsdfsdf"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get current profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/auth/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get resumes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/resumes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"resumes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get templates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/templates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"templates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete resume",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/resumes/68fce3abc5af58194644cf0f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"resumes",
+						"68fce3abc5af58194644cf0f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get resume",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/resumes/68fce5feda9d1ce0f0e3da9a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"resumes",
+						"68fce5feda9d1ce0f0e3da9a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order history",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/payment/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"payment",
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/payment/order/order_RYxtWTFCkyYvG5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"payment",
+						"order",
+						"order_RYxtWTFCkyYvG5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Bushan\",\n    \"email\": \"bushanvlogs@gmail.com\",\n    \"password\": \"123456\",\n    \"profileImageUrl\": \"http://simpleimage.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create resume",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"My second resume\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/resumes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"resumes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send email with attachment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "recipientEmail",
+							"value": "bushanvlogs@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "My resume",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "Pdf file",
+							"type": "text"
+						},
+						{
+							"key": "pdfFile",
+							"type": "file",
+							"src": "/Users/bushansirgur/Downloads/quick-check.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/email/send-resume",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"email",
+						"send-resume"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"planType\": \"premium\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/payment/create-order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"payment",
+						"create-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resend verification email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"bushanvlogs@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/resend-verification",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"resend-verification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"bushanvlogs@gmail.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload profile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/bushansirgur/Downloads/Your paragraph text (2).png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/upload-image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"upload-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update resume",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"68fc7ab851ac36242b611aa7\",\n    \"title\": \"My second resume - updated\",\n    \"thumbnailLink\": null,\n    \"template\": null,\n    \"profileInfo\": {\n        \"profilePreviewUrl\": null,\n        \"fullName\": \"Bushan SC\",\n        \"designation\": \"Software engineer\",\n        \"summary\": \"Software Engineer\"\n    },\n    \"contactInfo\": {\n        \"email\": null,\n        \"phone\": null,\n        \"location\": null,\n        \"linkedIn\": null,\n        \"github\": null,\n        \"website\": null\n    },\n    \"workExperience\": [],\n    \"education\": [],\n    \"skills\": [],\n    \"projects\": [],\n    \"certifications\": [],\n    \"languages\": [],\n    \"interests\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/resumes/68fce5feda9d1ce0f0e3da9a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"resumes",
+						"68fce5feda9d1ce0f0e3da9a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload resume images",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "thumbnail",
+							"type": "file",
+							"src": "/Users/bushansirgur/Downloads/FB_IMG_1447510477355.jpg"
+						},
+						{
+							"key": "profileImage",
+							"type": "file",
+							"src": "/Users/bushansirgur/Downloads/Heading.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/resumes/68fce5feda9d1ce0f0e3da9a/upload-images",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"resumes",
+						"68fce5feda9d1ce0f0e3da9a",
+						"upload-images"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2OGZjN2FiODUxYWMzNjI0MmI2MTFhYTciLCJpYXQiOjE3NjE3Mzk3OTgsImV4cCI6MTc2MjM0NDU5OH0.HIFXNZDww9R_5nsAbJRgfMnLh5PhQdQ5wRV75yo2WqnzfEljSZ3gDtbl-msX2FePax7cI5y2fEtHxU7eyGDIyg",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
